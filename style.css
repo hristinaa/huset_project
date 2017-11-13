@@ -1,5 +1,5 @@
 body {
-    color: #777;
+    color: #29241f;
 }
 
 .pure-img-responsive {
@@ -27,6 +27,7 @@ This is the parent `<div>` that contains the menu and the content area.
     position: relative;
     left: 0;
     padding-left: 0;
+    background-color: #f6f2ef;
 }
     #layout.active #menu {
         left: 150px;
@@ -45,14 +46,17 @@ The content `<div>` is where all your content goes.
     max-width: 800px;
     margin-bottom: 50px;
     line-height: 1.6em;
+    color: #29241f;
+
 }
 
 .header {
      margin: 0;
-     color: #333;
+     color: #ee633d;
      text-align: center;
      padding: 2.5em 2em 0;
      border-bottom: 1px solid #eee;
+/*     background-color:  #161920;*/
  }
     .header h1 {
         margin: 0.2em 0;
@@ -61,15 +65,19 @@ The content `<div>` is where all your content goes.
     }
      .header h2 {
         font-weight: 300;
-        color: #ccc;
+        color:  #2c465c;
         padding: 0;
         margin-top: 0;
+
+
     }
+
+
 
 .content-subhead {
     margin: 50px 0 20px 0;
     font-weight: 300;
-    color: #888;
+    color:  #2c465c;
 }
 
 
@@ -87,7 +95,7 @@ appears on the left side of the page.
     left: 0;
     bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #191818;
+    background: #161920;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -95,7 +103,7 @@ appears on the left side of the page.
     All anchors inside the menu should be styled like this.
     */
     #menu a {
-        color: #999;
+        color: #f6f2ef;
         border: none;
         padding: 0.6em 0 0.6em 0.6em;
     }
@@ -121,7 +129,7 @@ appears on the left side of the page.
         */
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-            background: #333;
+            background: #2c465c;
         }
 
     /*
@@ -129,13 +137,13 @@ appears on the left side of the page.
     */
     #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        background: #1f8dd6;
+        background: #ee633d;
     }
         /*
         This styles a link within a selected menu item `<li>`.
         */
         #menu .pure-menu-selected a {
-            color: #fff;
+            color: #f6f2ef;
         }
 
     /*
@@ -143,8 +151,9 @@ appears on the left side of the page.
     */
     #menu .pure-menu-heading {
         font-size: 110%;
-        color: #fff;
+        color:#f6f2ef;
         margin: 0;
+
     }
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
@@ -163,7 +172,7 @@ small screens.
     display: block; /* show this only on small screens */
     top: 0;
     left: 0; /* "#menu width" */
-    background: #000;
+/*    background: black;*/
     background: rgba(0,0,0,0.7);
     font-size: 10px; /* change this value to increase/decrease button size */
     z-index: 10;
@@ -174,7 +183,7 @@ small screens.
 
     .menu-link:hover,
     .menu-link:focus {
-        background: #000;
+        background: #ee633d;
     }
 
     .menu-link span {
