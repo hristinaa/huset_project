@@ -19,7 +19,7 @@ function getSinglePostById(myId){
 function showSinglePost(json){
     console.log(json);
     document.querySelector("#single h1").textContent=json.title.rendered;
-    document.querySelector("#single img").setAttribute('src',json._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url);
+    document.querySelector("#single img").setAttribute('src',json._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
     document.querySelector(".postcontent").innerHTML=json.content.rendered;
 
     document.querySelector(".price span").textContent=json.acf.price;
@@ -52,8 +52,8 @@ function showPosts(data){
         title.textContent=thePost.title.rendered;
         excerpt.innerHTML=thePost.excerpt.rendered;
         price.textContent=thePost.acf.price;   //custom fields example
-        console.log(thePost._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url)
-        img.setAttribute("src",thePost._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url);
+        console.log(thePost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
+        img.setAttribute("src",thePost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
        link.setAttribute("href", "post.html?id="+thePost.id);
 
         list.appendChild(clone); //DOOOOOO NOOOTTT DELETEEE THISSSSSS!!!!!!!!!!!!!!!!
@@ -74,6 +74,11 @@ if(id){
     getData();               //here we are calling the function getData//////
 
 }
+
+
+
+
+
 
 
 
