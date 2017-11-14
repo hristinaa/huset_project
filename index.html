@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nesletter | Movie & Performance Art</title>
 
 
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
@@ -27,32 +27,38 @@
 
     <div id="menu">
         <div class="pure-menu">
-            <a class="pure-menu-heading" href="#">Categories</a>
+<!--           <li><a class="pure-menu-heading" href="index.html">HOME</a></li>  home link maybe will change it-->
 
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">music</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">movie</a></li>
+        <a class="pure-menu-heading" href="#">Menu</a>  <!-- MAYBE WILL STAY LIKE THIS-->
 
-                <li class="pure-menu-item menu-item-divided pure-menu-selected">
-                    <a href="#" class="pure-menu-link">performance art</a>
-                </li>
+<!--changes come below this line-->
 
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">spoken word</a></li>
+
+            <ul class="pure-menu-list" id="tagmenu"> <!--change in this line: put in id-->
+                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link" >Home</a></li>
+
+                <template id="linkTemplate">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">tags</a></li>
+                </template>
+
+
+
             </ul>
         </div>
     </div>
 
-    <!-------------------------------------------------->
+    <!---------------------------------------------->
 
 
  <div id="main">
         <div class="header">
             <h1>Newsletter</h1>
-            <h2>HUSET-KBH events</h2>
+            <h2>movies & performance art</h2>
         </div>
 
         <div class="content">
-<!--            <h2 class="content-subhead">How to use this layout</h2>-->
+
+
 
 
     <section id="list">    <!--all the posts will come here-->
@@ -81,7 +87,7 @@
 
 
 
-<!--JS should be in the end of the body-->
+<!--JS should be in the end of the body -->
 
   <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
