@@ -4,6 +4,11 @@ function getData () {
     .then(showPosts)
 }
 
+function getAllPostsByTag(id){
+    fetch("http://hrissi.com/mywpsite/wp-json/wp/v2/posts?_embed&tags="+id)
+    .then(res=>res.json())
+    .then(showPosts)
+}
 
 
 
@@ -14,6 +19,38 @@ function getSinglePostById(myId){
     .then(showSinglePost)
 
 }
+
+
+//new things come below this line (wprest 3)
+
+function getMenu(){
+    fetch("http://hrissi.com/mywpsite/wp-json/wp/v2/tags")   //to decide if I need tags or categories and tochange it
+    .then(e=>e.json())
+    .then(showMenu)
+}
+
+function showMenu(tags){
+    console.log(tags);
+    let lt=document.querySelector("#linkTemplate").content;
+
+
+    tags.forEach(function(tag){
+        if(tag.count > 0){
+
+          let clone= lt.cloneNode(true);        //very important !!!!!!!!
+          let parent= document.querySelector("#tagmenu");
+          clone.querySelector("a").textContent=tag.name;
+          clone.querySelector("a").setAttribute("href", "index.html?tagid="+tag.id)
+
+          parent.appendChild(clone);    //never delete!!!!!!!!!
+        }
+
+    });
+
+
+}
+
+//end here
 
 //to fix this
 function showSinglePost(json){
@@ -65,16 +102,26 @@ function showPosts(data){
 
 let searchParams = new URLSearchParams(window.location.search);
 let id = searchParams.get("id");
+let tagid = searchParams.get("tagid");
 //console.log(id)
+
+
+getMenu();//call the function getMenu here
+
 
 if(id){
     getSinglePostById(id);
+}
+
+if(tagid){
+    getAllPostsByTag(tagid);
+
+
 
 } else{
     getData();               //here we are calling the function getData//////
 
 }
-
 
 
 
