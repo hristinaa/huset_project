@@ -1,5 +1,10 @@
 body {
     color: #29241f;
+    background-color: #f6f2ef;
+}
+
+h1{
+    color: #ee633d;
 }
 
 .pure-img-responsive {
@@ -56,16 +61,17 @@ The content `<div>` is where all your content goes.
      text-align: center;
      padding: 2.5em 2em 0;
      border-bottom: 1px solid #eee;
-/*     background-color:  #161920;*/
+     background-color: #161920;;
  }
     .header h1 {
         margin: 0.2em 0;
         font-size: 3em;
         font-weight: 300;
+
     }
      .header h2 {
         font-weight: 300;
-        color:  #2c465c;
+        color: #f6f2ef ;
         padding: 0;
         margin-top: 0;
 
@@ -80,7 +86,31 @@ The content `<div>` is where all your content goes.
     color:  #2c465c;
 }
 
+.read-more{
 
+    color:  #f6f2ef;
+
+    }
+.read{
+    text-align: center;
+    background: #2c465c;
+    width: 60%;
+    height: 2.5em;
+    border-radius: 10px;
+
+}
+
+a{
+    text-decoration: none;
+
+}
+
+
+
+article{
+    margin-bottom: 50px;
+/*    margin-top: 50px;*/
+}
 
 /*
 The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
@@ -158,10 +188,7 @@ appears on the left side of the page.
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 
-/*
-The button to open/close the Menu is custom-made and not part of Pure. Here's
-how it works:
-*/
+
 
 /*
 `.menu-link` represents the responsive menu toggle that shows/hides on
@@ -172,8 +199,7 @@ small screens.
     display: block; /* show this only on small screens */
     top: 0;
     left: 0; /* "#menu width" */
-/*    background: black;*/
-    background: rgba(0,0,0,0.7);
+   background-color: #161920;
     font-size: 10px; /* change this value to increase/decrease button size */
     z-index: 10;
     width: 2em;
@@ -213,9 +239,7 @@ small screens.
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
-/*
-Hides the menu at `48em`, but modify this based on your app's needs.
-*/
+
 @media (min-width: 48em) {
 
     .header,
@@ -241,17 +265,18 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     #layout.active .menu-link {
         left: 150px;
     }
+
 }
 
 @media (max-width: 48em) {
-    /* Only apply this when the window is small. Otherwise, the following
-    case results in extra padding on the left:
-        * Make the window small.
-        * Tap the menu to trigger the active state.
-        * Make the window large again.
-    */
+
     #layout.active {
         position: relative;
         left: 150px;
     }
+
+    img{
+    width: 90%;
+        height: auto;
+}
 }
