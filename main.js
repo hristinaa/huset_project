@@ -1,5 +1,5 @@
 function getData () {
-    fetch("http://hrissi.com/mywpsite/wp-json/wp/v2/posts?_embed")
+    fetch("http://hrissi.com/mywpsite/wp-json/wp/v2/posts?_embed&per_page=11")
     .then(res=>res.json())
     .then(showPosts)
 }
@@ -21,10 +21,8 @@ function getSinglePostById(myId){
 }
 
 
-//new things come below this line (wprest 3)
-
 function getMenu(){
-    fetch("http://hrissi.com/mywpsite/wp-json/wp/v2/tags")   //to decide if I need tags or categories and tochange it
+    fetch("http://hrissi.com/mywpsite/wp-json/wp/v2/tags")
     .then(e=>e.json())
     .then(showMenu)
 }
@@ -50,9 +48,7 @@ function showMenu(tags){
 
 }
 
-//end here
 
-//to fix this
 function showSinglePost(json){
     console.log(json);
     document.querySelector("#single h1").textContent=json.title.rendered;
@@ -122,16 +118,5 @@ if(tagid){
     getData();               //here we are calling the function getData//////
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
